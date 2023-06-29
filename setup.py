@@ -1,0 +1,86 @@
+from configparser import ConfigParser
+import os
+# setupini file integrator
+setup=ConfigParser()
+setup.read('setup.ini')
+try:
+    address=int(setup['rs485']['address'],16)
+except:
+    address=int("0x01",16)
+try:
+    port=setup['rs485']['port']
+except:
+    port='/dev/AMA0'
+try:
+    baudrate=int(setup['rs485']['baudrate'])
+except:
+    baudrate=115200
+try:
+    parity=setup['rs485']['parity']
+except:
+    parity='E'
+try:
+    stopbits=int(setup['rs485']['stopbits'])
+except:
+    stopbits=1
+try:
+    bytesize=int(setup['rs485']['bytesize'])
+except:
+    bytesize=8
+try:
+    url=setup['server']['url']
+except:
+    url='http://127.0.0.1'
+try:
+    wait=int(setup['server']['wait'])
+except:
+    wait=30
+try:
+    fail=int(setup['server']['fail'])
+except:
+    fail=10
+try:
+    token=setup["influx"]["token"]
+except:
+    token=''
+try:
+    org=setup["influx"]["org"]
+except:
+    org=''
+try:
+    host=setup["influx"]["host"]
+except:
+    host=''
+try:
+    bucket=setup["influx"]["bucket"]
+except:
+    bucket=''
+try:
+    keep=setup["influx"]["keep"]
+except:
+    keep=10
+try:
+    loop=setup["influx"]["loop"]
+except:
+    loop=60
+try:
+    remote_host=setup["onDevice"]["remote_host"]
+except:
+    remote_host='34.118.39.23'
+try:
+    remote_user=setup["onDevice"]["remote_user"]
+except:
+    remote_user='mysql_remote_user'
+try:
+    remote_password=setup["onDevice"]["remote_password"]
+except:
+    remote_password='2c18e486683a3db1e64'
+try:
+    remote_port=setup["onDevice"]["remote_port"]
+except:
+    remote_port=3306
+try:
+    remote_database=setup["onDevice"]["remote_database"]
+except:
+    remote_database='online_devices'
+
