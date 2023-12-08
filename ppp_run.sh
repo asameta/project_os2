@@ -12,7 +12,7 @@ echo "[Unit]
   User=root
   Restart=always
 [Install]
-  WantedBy=multi-user.target">/etc/systemd/system/questel.service;
+  WantedBy=multi-user.target">/etc/systemd/system/quectel.service;
 
 echo "[Unit]
 Description=Add route ppp0
