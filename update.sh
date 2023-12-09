@@ -16,7 +16,7 @@ while true; do
   # Initial starting value for checks
   CHECKS=0
 
-  declare -i
+#  declare -i
   # Loop while we're not online.
   while [ $IS_ONLINE -eq 0 ];
   do
