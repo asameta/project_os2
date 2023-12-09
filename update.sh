@@ -2,7 +2,7 @@
 
 STATE2=1
 cd /home/project_os2
-sudo sh nginx_manage.sh &   # attempt to open local interface
+#sudo sh nginx_manage.sh &   # attempt to open local interface
 
 while true; do
   cd /home/project_os2
