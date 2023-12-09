@@ -1,4 +1,4 @@
-while [ 0 ]
+while true;
 do
 
  if [ $(sudo ifconfig eth0 | grep -E -o 'inet [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'  | cut -d' ' -f2) ];
