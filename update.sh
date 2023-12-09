@@ -1,10 +1,11 @@
 #!/bin/bash
 
 STATE2=1
+cd /home/project_os2
+sudo sh nginx_manage.sh &   # attempt to open local interface
+
 while true; do
   cd /home/project_os2
-  sudo sh nginx_manage.sh &   # attempt to open local interface
-
   check_online(){
     netcat -z -w 5 8.8.8.8 53 && echo 1 || echo 0
   }
@@ -55,5 +56,6 @@ while true; do
       echo  all_clear
     done
   fi
+  sleep 20
 
 done
