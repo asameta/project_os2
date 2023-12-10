@@ -76,7 +76,6 @@ def run():
 
         try:
             volume_flow = flowmeter.getVolumeFlow()
-            print(volume_flow)
         except:
             pass
 
