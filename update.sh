@@ -2,7 +2,6 @@
 
 STATE2=1
 cd /home/project_os2
-#sudo sh nginx_manage.sh &   # attempt to open local interface
 
 while true; do
   cd /home/project_os2
@@ -50,7 +49,7 @@ while true; do
       cd /home/project_os2
       sudo systemctl restart nginx &
       sudo python /home/project_os2/upEtki.py &
-      #sudo python /home/project_os2/sender.py &   # Data sender to cloud
+      sudo python /home/project_os2/sender.py &   # Data sender to cloud
       #sudo hwclock -w
       break
       echo  all_clear
