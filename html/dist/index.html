@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Fira Code:wght@400;600&family=Montserrat:wght@500;600;700;800;900&family=Roboto:wght@300;400;500;600;700&display=swap">
+
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="/favicon.ico" type="image/png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="mask-icon" href="/favicon.svg" color="#FFFFFF" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="msapplication-TileColor" content="#232326" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Etki Configration</title>
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta property="og:site_name" content="Vuero by Css Ninja" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vuero.cssninja.io/" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- 
+      preloading fonts vendors
+    -->
+    <link
+      rel="preload"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="/vendors/font-awesome-v5.css"
+    />
+    <link
+      rel="preload"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="/vendors/line-icons-pro.css"
+    />
+    <script>
+      ;(function () {
+        const prefersDark =
+          window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        const setting = localStorage.getItem('color-schema') || 'auto'
+        if (setting === 'dark' || (prefersDark && setting !== 'light'))
+          document.documentElement.classList.toggle('is-dark', true)
+      })()
+    </script>
+    <script type="module" crossorigin src="/assets/index-c8e1db29.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/chunk-BGPNDDXN-18fd0b11.js">
+    <link rel="modulepreload" crossorigin href="/assets/@vueuse_head-b43a635b.js">
+    <link rel="modulepreload" crossorigin href="/assets/VButton.vue_vue_type_style_index_0_lang-04276c31.js">
+    <link rel="modulepreload" crossorigin href="/assets/app-cd5c52f9.js">
+    <link rel="stylesheet" href="/assets/VButton-72092d6a.css">
+    <link rel="stylesheet" href="/assets/app-edea9413.css">
+  <link rel="manifest" href="/manifest.webmanifest"></head>
+  <body>
+    <div data-teleport-bg></div>
+
+    <div id="app" class="app-wrapper"></div>
+    
+  </body>
+</html>
