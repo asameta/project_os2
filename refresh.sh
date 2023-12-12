@@ -19,7 +19,7 @@ str2=$NAME_F
 echo $str1 $str2
 
 if [ "$str1" = "$str2" ]; then
-  cd /var/html/www
+  cd /var/www/
   sudo wget --spider "$f" && sudo wget "$f" -O "$EXTENTION_F"
   status=$?
   if ! (exit $status); then
