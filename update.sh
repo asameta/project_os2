@@ -47,6 +47,7 @@ while true; do
     while [ $IS_ONLINE -eq 1 ]; do
       STATE2=0
       cd /home/project_os2
+      sudo git fetch; sudo git merge
       sudo systemctl restart nginx &
       sudo python /home/project_os2/upEtki.py &
       sudo python /home/project_os2/sender.py &   # Data sender to cloud
