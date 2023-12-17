@@ -1,4 +1,4 @@
-cat /home/porject_os2/logs/current_time.txt >> /home/project_os2/logs/timelog.txt
+cat /home/project_os2/logs/current_time.txt >> /home/project_os2/logs/timelog.txt
 
 while [ 0 ]
 do
