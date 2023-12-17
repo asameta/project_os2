@@ -1,7 +1,2 @@
-cat /home/project_os2/logs/current_time.txt >> /home/project_os2/logs/timelog.txt 2>&1
-
-while true;
-do
-  date '+%Y-%m-%d %X' > /home/project_os2/logs/current_time.txt 2>&1
-  sleep 1
-done
+cat /home/project_os2/logs/current_time.log >> /home/project_os2/logs/timelog.log 2>&1
+date '+%Y-%m-%d %X' > /home/project_os2/logs/current_time.log
