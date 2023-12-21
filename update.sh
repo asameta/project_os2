@@ -36,12 +36,12 @@ while true; do
     fi
   done
 
-  if [ $IS_ONLINE -eq 0 ]; then
-    # We never were able to get online. Kill script.
-    #echo many_attempt_to_test
-    sudo reboot
-    exit 1
-  fi
+#  if [ $IS_ONLINE -eq 0 ]; then
+#    # We never were able to get online. Kill script.
+#    #echo many_attempt_to_test
+#    sudo reboot
+#    exit 1
+#  fi
 
   if [ $STATE2 -eq 1 ]; then
     while [ $IS_ONLINE -eq 1 ]; do
