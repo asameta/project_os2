@@ -4,7 +4,7 @@ from Cython.Distutils import build_ext
 
 
 setup(
-  name='krohne',
-  ext_modules=[Extension('krohne', ['krohne.py'],)],
+  name='etki',
+  ext_modules=[Extension('etki', ['etki.py'],)],
   cmdclass={'build_ext': build_ext},
 )
