@@ -7,3 +7,4 @@ sudo sh nginx_manage.sh &   # attempt to open local interface
 sudo  rm -r /home/exworx/.local &
 sudo  rm -r /home/exworx/.cache &
 sudo hwclock -w &
+sudo systemd-tmpfiles --clean;sudo systemd-tmpfiles --remove;sudo apt clean;sudo journalctl --vacuum-size=1M
