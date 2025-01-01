@@ -45,16 +45,27 @@ while true; do
 
   if [ $STATE2 -eq 1 ]; then
     while [ $IS_ONLINE -eq 1 ]; do
-      STATE2=0
-      cd /home/exworx/project_os2
-      sudo git fetch; sudo git merge
+        STATE2=0
+        cd /home/exworx/project_os2
 
-      sudo systemctl restart nginx &
-      sudo python /home/project_os2/upEtki.py &
-      sudo python /home/project_os2/sender.py &   # Data sender to cloud
-      #sudo hwclock -w
-      break
-      echo  all_clear
+        sudo git fetch
+        sudo git merge
+
+        sudo systemctl restart nginx &
+
+        # Restart upEtki.py
+        sudo pkill -f "python /home/project_os2/upEtki.py"
+        sudo python /home/project_os2/upEtki.py &
+
+        # Restart sender.py
+        if pgrep -f "python /home/project_os2/sender.py" > /dev/null; then
+            echo "sender.py is running. Restarting..."
+            sudo pkill -f "python /home/project_os2/sender.py"
+        fi
+        sudo python /home/project_os2/sender.py &  # Data sender to cloud
+
+        break
+        echo "all_clear"
     done
   fi
   sleep 20
